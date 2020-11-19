@@ -13,8 +13,12 @@ const tutorials = [
 
 const titleCased = () => {
   return tutorials.map(function(tutorial) {
-    return tutorial.toLowerCase().split(' ').map(function(word) {
-      return word.charAt(0).toUpperCase() + word.slice(1);
+    return tutorial.split(' ').map(function(word) {
+      if (word.charAt(0) !== word.charAt(0).toUpperCase)
+      {
+        word.charAt(0).toUpperCase;
+      }
+      return word;
     }).join(' ');
   });
 }
